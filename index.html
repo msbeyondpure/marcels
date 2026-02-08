@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" content="Marcel Shorter">
+  <meta name="description" content="Author. Founder. Essays on Blackness, neurodivergence, and the structures that shape our world.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Marcel Shorter">
+  <meta property="og:description" content="Author. Founder. Essays on Blackness, neurodivergence, and the structures that shape our world.">
+  <link rel="shortcut icon" type="image/jpeg" href="assets/favicon.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <title>Marcel Shorter</title>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <div class="nav__left">
+        <a class="nav__link" href="index.html">Essays</a>
+        <a class="nav__link" href="#">About</a>
+      </div>
+      <a class="nav__brand" href="index.html">Marcel Shorter</a>
+      <div class="nav__right">
+        <a class="nav__link" href="https://www.instagram.com/" target="_blank">Instagram</a>
+        <a class="nav__link" href="https://beyondpure.org" target="_blank">Beyond Pure</a>
+      </div>
+      <button class="nav__menu-btn" onclick="document.querySelector('.nav__mobile-links').classList.toggle('active')" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="nav__mobile-links">
+      <a class="nav__link" href="index.html">Essays</a>
+      <a class="nav__link" href="#">About</a>
+      <a class="nav__link" href="https://www.instagram.com/" target="_blank">Instagram</a>
+      <a class="nav__link" href="https://beyondpure.org" target="_blank">Beyond Pure</a>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <div class="section-label">Recent Essays</div>
+
+    <div class="post-grid">
+
+      <!-- FEATURED POST -->
+      <a href="articles/neurodivergence-and-white-supremacy.html" class="post-card post-card--featured">
+        <img class="post-card__img" src="https://images.unsplash.com/photo-1509909756405-be0199881695?w=1200&h=500&fit=crop&crop=center" alt="Abstract neural patterns">
+        <div class="post-card__body">
+          <div class="post-card__meta">
+            <span class="post-card__tag">Race &amp; Cognition</span>
+            <span class="post-card__date">Feb 2026</span>
+          </div>
+          <div class="post-card__title">How Black Neurodivergence Is Exploited by White Supremacist Structures</div>
+          <p class="post-card__excerpt">The diagnostic apparatus that identifies autism in Black children was never designed with Black cognition in mind. This failure is structural, and it serves a purpose. An examination of the pipeline from misdiagnosis to institutional capture.</p>
+        </div>
+      </a>
+
+      <!-- POST 2 -->
+      <a href="articles/respectability-and-capital.html" class="post-card">
+        <img class="post-card__img" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=340&fit=crop&crop=center" alt="Office desk">
+        <div class="post-card__body">
+          <div class="post-card__meta">
+            <span class="post-card__tag">Economics</span>
+            <span class="post-card__date">Jan 2026</span>
+          </div>
+          <div class="post-card__title">Respectability Politics as a Capital Extraction Mechanism</div>
+          <p class="post-card__excerpt">The instruction to "act right" has always been an economic directive. A closer look at who profits when Black communities police their own presentation.</p>
+        </div>
+      </a>
+
+      <!-- POST 3 -->
+      <a href="articles/sovereignty-of-the-black-body.html" class="post-card">
+        <img class="post-card__img" src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&h=340&fit=crop&crop=center" alt="Portrait">
+        <div class="post-card__body">
+          <div class="post-card__meta">
+            <span class="post-card__tag">Philosophy</span>
+            <span class="post-card__date">Jan 2026</span>
+          </div>
+          <div class="post-card__title">Sovereignty of the Black Body in Post-Industrial America</div>
+          <p class="post-card__excerpt">What does bodily autonomy mean when the body itself has been codified as property within the juridical memory of the state? A reading through Agamben and Fanon.</p>
+        </div>
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__text">&copy; 2026 <span class="footer__brand">Marcel Shorter</span>. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>
