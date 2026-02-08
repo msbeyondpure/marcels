@@ -111,10 +111,10 @@
             <span class="contact__label">Instagram</span>
             <span class="contact__value">@marcel_shorter</span>
           </a>
-          <a href="https://beyondpure.org" target="_blank" class="contact__link">
-            <span class="contact__label">Beyond Pure</span>
-            <span class="contact__value">beyondpure.org</span>
-          </a>
+          <button onclick="copyLink()" class="contact__link contact__link--btn" id="share-btn">
+            <span class="contact__label">Share</span>
+            <span class="contact__value" id="share-text">Copy to Clipboard</span>
+          </button>
         </div>
       </div>
     </div>
@@ -126,6 +126,14 @@
   </footer>
 
   <script>
+    function copyLink() {
+      navigator.clipboard.writeText('https://marcelshorter.com').then(() => {
+        const text = document.getElementById('share-text');
+        text.textContent = 'Copied!';
+        setTimeout(() => { text.textContent = 'Copy to Clipboard'; }, 2000);
+      });
+    }
+
     document.querySelectorAll('.nav__tab').forEach(tab => {
       tab.addEventListener('click', () => {
         // Update tabs
