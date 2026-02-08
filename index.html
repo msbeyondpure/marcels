@@ -13,19 +13,29 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
-  <title>Marcel Shorter</title>
+  <title>Marcel Shorter - HYPERFIXATION</title>
 </head>
 <body>
 
   <!-- NAV -->
-  <nav class="nav">
+  <nav class="nav" id="main-nav">
     <div class="nav__inner">
-      <span class="nav__brand">Marcel Shorter</span>
+      <div class="nav__center">
+        <span class="nav__brand">Marcel Shorter</span>
+        <div class="nav__tabs">
+          <button class="nav__tab nav__tab--active" data-tab="articles">Articles</button>
+          <button class="nav__tab" data-tab="contact">Contact</button>
+        </div>
+      </div>
     </div>
   </nav>
 
-  <!-- MAIN -->
-  <div class="main">
+  <!-- ARTICLES SECTION -->
+  <div class="page-section page-section--active" id="articles">
+    <div class="banner">
+      <img src="adw.png" alt="Banner" class="banner__img">
+    </div>
+    <div class="main">
 
     <div class="section-label">Articles</div>
 
@@ -33,7 +43,7 @@
 
       <!-- FEATURED POST -->
       <a href="articles/neurodivergence-and-white-supremacy.html" class="post-card post-card--featured">
-        <img class="post-card__img" src="https://images.unsplash.com/photo-1509909756405-be0199881695?w=1200&h=500&fit=crop&crop=center" alt="Abstract neural patterns">
+        <div class="post-card__accent"></div>
         <div class="post-card__body">
           <div class="post-card__meta">
             <span class="post-card__tag">Race &amp; Cognition</span>
@@ -46,7 +56,7 @@
 
       <!-- POST 2 -->
       <a href="articles/respectability-and-capital.html" class="post-card">
-        <img class="post-card__img" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=340&fit=crop&crop=center" alt="Office desk">
+        <div class="post-card__accent"></div>
         <div class="post-card__body">
           <div class="post-card__meta">
             <span class="post-card__tag">Economics</span>
@@ -59,7 +69,7 @@
 
       <!-- POST 3 -->
       <a href="articles/sovereignty-of-the-black-body.html" class="post-card">
-        <img class="post-card__img" src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&h=340&fit=crop&crop=center" alt="Portrait">
+        <div class="post-card__accent"></div>
         <div class="post-card__body">
           <div class="post-card__meta">
             <span class="post-card__tag">Philosophy</span>
@@ -72,23 +82,76 @@
 
     </div>
 
+    <!-- PROFILE CARD -->
+    <section class="profile-card">
+      <img class="profile-card__img" src="PROF.png" alt="Marcel Shorter">
+      <div class="profile-card__content">
+        <h2 class="profile-card__title">
+          <span class="typewriter typewriter--line1">MARCEL SHORTER</span>
+          <span class="typewriter typewriter--line2">HYPERFIXATION</span>
+        </h2>
+        <p class="profile-card__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+        <div class="profile-card__accent"></div>
+      </div>
+    </section>
+
+  </div>
   </div>
 
-  <!-- PROFILE SECTION -->
-  <section class="profile">
-    <div class="profile__inner">
-      <img class="profile__img" src="PROF.png" alt="Marcel Shorter">
-      <h2 class="profile__title">
-        <span class="typewriter">MARCEL SHORTER - HYPERFIXATION</span>
-      </h2>
-      <p class="profile__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <!-- CONTACT SECTION -->
+  <div class="page-section" id="contact">
+    <div class="contact">
+      <div class="contact__inner">
+        <div class="contact__links">
+          <a href="mailto:hello@marcelshorter.com" class="contact__link">
+            <span class="contact__label">Email</span>
+            <span class="contact__value">hello@marcelshorter.com</span>
+          </a>
+          <a href="https://instagram.com/marcel_shorter" target="_blank" class="contact__link">
+            <span class="contact__label">Instagram</span>
+            <span class="contact__value">@marcel_shorter</span>
+          </a>
+          <a href="https://beyondpure.org" target="_blank" class="contact__link">
+            <span class="contact__label">Beyond Pure</span>
+            <span class="contact__value">beyondpure.org</span>
+          </a>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
 
   <!-- FOOTER -->
-  <footer class="footer">
+  <footer class="footer" id="main-footer">
     <div class="footer__text">&copy; 2026 <span class="footer__brand">Marcel Shorter</span>. All rights reserved.</div>
   </footer>
+
+  <script>
+    document.querySelectorAll('.nav__tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Update tabs
+        document.querySelectorAll('.nav__tab').forEach(t => t.classList.remove('nav__tab--active'));
+        tab.classList.add('nav__tab--active');
+
+        // Update sections
+        const targetId = tab.dataset.tab;
+        document.querySelectorAll('.page-section').forEach(section => {
+          section.classList.remove('page-section--active');
+        });
+        document.getElementById(targetId).classList.add('page-section--active');
+
+        // Toggle dark mode for nav/footer on contact
+        const nav = document.getElementById('main-nav');
+        const footer = document.getElementById('main-footer');
+        if (targetId === 'contact') {
+          nav.classList.add('nav--dark');
+          footer.classList.add('footer--dark');
+        } else {
+          nav.classList.remove('nav--dark');
+          footer.classList.remove('footer--dark');
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
