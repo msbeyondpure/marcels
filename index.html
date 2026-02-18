@@ -37,6 +37,8 @@
     </div>
     <div class="main">
 
+    <button class="readers-note-btn" onclick="document.getElementById('readers-note-modal').classList.add('active')">Reader&rsquo;s Note</button>
+
     <div class="section-label">Articles</div>
 
     <div class="post-grid">
@@ -98,6 +100,17 @@
   <footer class="footer" id="main-footer">
     <div class="footer__text">Based in New York &middot; &copy; 2026 <span class="footer__brand">Marcel Shorter</span>. All rights reserved.</div>
   </footer>
+
+  <!-- READER'S NOTE MODAL -->
+  <div class="rn-modal" id="readers-note-modal" onclick="if(event.target===this)this.classList.remove('active')">
+    <div class="rn-modal__box">
+      <button class="rn-modal__close" onclick="this.closest('.rn-modal').classList.remove('active')">&times;</button>
+      <h3 class="rn-modal__title">Reader&rsquo;s Note</h3>
+      <p class="rn-modal__author">MARCEL SHORTER</p>
+      <p class="rn-modal__text">This writing has not been developed linearly, nor is it to be understood linearly. To those afflicted by neurodivergence this style will feel familiar. For others blessed by normalcy, such a disposition may make this style jarring &mdash; Persist, these formulations are intended to find footholds in places contemporary analysis has yet to encounter.</p>
+      <p class="rn-modal__text">I would implore you to not expect your conceptual entries and exits, of which there will be many, to be identical to another. There will be no boundaries deliberately upheld (aside from those necessary to maintain the mortal/financial/social sovereignty of the writer), we write to understand functions and functions alone.</p>
+    </div>
+  </div>
 
   <script>
     function copyLink() {
