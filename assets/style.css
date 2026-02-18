@@ -683,21 +683,30 @@ img {
   color: var(--accent);
 }
 
-/* ===== READER'S NOTE BUTTON ===== */
+/* ===== READER'S NOTE CARD & BUTTON ===== */
+.rn-card {
+  cursor: pointer;
+  animation: subtlePulse 3s ease-in-out infinite;
+}
+
+.rn-card:hover {
+  animation: none;
+}
+
 .readers-note-btn {
   display: inline-block;
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--accent);
   background: none;
   border: 1px solid var(--accent);
-  padding: 0.5rem 1.25rem;
+  padding: 0.4rem 1rem;
   border-radius: 2px;
   cursor: pointer;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   transition: background 0.3s ease, color 0.3s ease;
   animation: subtlePulse 3s ease-in-out infinite;
 }
@@ -706,12 +715,6 @@ img {
   background: var(--accent);
   color: #fff;
   animation: none;
-}
-
-.readers-note-btn--sm {
-  font-size: 0.6rem;
-  padding: 0.35rem 1rem;
-  margin-bottom: 2rem;
 }
 
 @keyframes subtlePulse {
