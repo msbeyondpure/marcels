@@ -257,8 +257,8 @@ img {
 /* ===== SECTION HERO ===== */
 .section-hero {
   text-align: center;
-  margin-bottom: 2.5rem;
-  padding-bottom: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
   border-bottom: 1px solid var(--border);
 }
 
