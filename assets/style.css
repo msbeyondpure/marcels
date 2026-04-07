@@ -244,6 +244,10 @@ img {
   padding: 2rem 2rem 4rem;
 }
 
+.main--wellness {
+  padding-top: 7rem;
+}
+
 /* ===== SECTION HERO ===== */
 .section-hero {
   text-align: center;
@@ -869,6 +873,10 @@ img {
 
   .main {
     padding: 1.5rem 1rem 3rem;
+  }
+
+  .main--wellness {
+    padding-top: 6.5rem;
   }
 
   .post-card__body {
