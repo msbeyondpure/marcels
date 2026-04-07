@@ -8,12 +8,12 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Marcel Shorter">
   <meta property="og:description" content="Author. Founder. Essays on Blackness, neurodivergence, and the structures that shape our world.">
-  <link rel="shortcut icon" type="image/jpeg" href="assets/favicon.jpg">
+  <link rel="shortcut icon" type="image/jpeg" href="../assets/favicon.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css?v=3">
-  <title>Marcel Shorter - BEYOND WELLNESS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/philosophy.css?v=3">
+  <title>Marcel Shorter - THOUGHTS</title>
 </head>
 <body>
 
@@ -21,8 +21,8 @@
   <nav class="nav" id="main-nav">
     <div class="nav__inner">
       <div class="nav__center">
-        <a class="nav__brand" href="./">Marcel Shorter</a>
-        <a class="nav__switch" href="thoughts/" aria-label="Open Thoughts site" title="Thoughts">T</a>
+        <span class="nav__brand">Marcel Shorter</span>
+        <a class="nav__switch" href="../" aria-label="Return to wellness site" title="Wellness">W</a>
         <div class="nav__tabs">
           <button class="nav__tab nav__tab--active" data-tab="articles">Articles</button>
           <button class="nav__tab" data-tab="contact">Contact</button>
@@ -33,10 +33,14 @@
 
   <!-- ARTICLES SECTION -->
   <div class="page-section page-section--active" id="articles">
+    <div class="banner">
+      <img src="../adw.png" alt="Banner" class="banner__img">
+    </div>
     <div class="main">
 
     <div class="section-hero">
-      <h1 class="section-hero__title">Beyond Wellness</h1>
+      <h1 class="section-hero__title">To the Core &mdash; Annihilatory Frameworks</h1>
+      <button class="readers-note-btn" onclick="document.getElementById('readers-note-modal').classList.add('active')">Reader&rsquo;s Note</button>
     </div>
 
     <div class="post-grid">
@@ -46,35 +50,10 @@
         <div class="post-card__accent"></div>
         <div class="post-card__body">
           <div class="post-card__meta">
-            <span class="post-card__tag">Wellness</span>
-            <span class="post-card__date">Apr 2026</span>
+            <span class="post-card__tag">Race &amp; Cognition</span>
+            <span class="post-card__date">Feb 2026</span>
           </div>
-          <div class="post-card__title">Beyond Wellness</div>
-          <p class="post-card__excerpt">Placeholder copy for the wellness-side article preview. Full text coming soon.</p>
-        </div>
-      </a>
-
-      <a href="articles/morning-mineral-ritual/" class="post-card">
-        <div class="post-card__accent"></div>
-        <div class="post-card__body">
-          <div class="post-card__meta">
-            <span class="post-card__tag">Wellness</span>
-            <span class="post-card__date">Apr 2026</span>
-          </div>
-          <div class="post-card__title">Morning Mineral Ritual</div>
-          <p class="post-card__excerpt">Placeholder copy for a future wellness article focused on daily balance and routine.</p>
-        </div>
-      </a>
-
-      <a href="articles/herbal-reset-notes/" class="post-card">
-        <div class="post-card__accent"></div>
-        <div class="post-card__body">
-          <div class="post-card__meta">
-            <span class="post-card__tag">Wellness</span>
-            <span class="post-card__date">Apr 2026</span>
-          </div>
-          <div class="post-card__title">Herbal Reset Notes</div>
-          <p class="post-card__excerpt">Placeholder copy for an upcoming wellness piece on restorative habits and simple care.</p>
+          <div class="post-card__title">Black Neurodivergence - Subvectors of Supremacy</div>
         </div>
       </a>
 
@@ -82,10 +61,14 @@
     </div>
 
     <!-- PROFILE CARD -->
-    <section class="profile-card profile-card--text-only">
+    <section class="profile-card">
+      <img class="profile-card__img" src="../PROF.png" alt="Marcel Shorter">
       <div class="profile-card__content">
-        <h2 class="profile-card__title">Marcel Shorter</h2>
-        <p class="profile-card__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <h2 class="profile-card__title">
+          <span class="typewriter typewriter--line1">MARCEL SHORTER</span>
+          <span class="typewriter typewriter--line2">HYPERFIXATION</span>
+        </h2>
+        <p class="profile-card__desc"><strong>Obsessive-Compulsive Materialism: the domain of pure function.</strong> Via the hyperconnective features of the neurodivergent brain&rsquo;s composition, we see what has been overseen, the dimension of relations that lies dormant in contemporary analysis. Having graduated from encounters with fascist mysticism, with an emphasis on missing nothing, Marcel Shorter seeks answers in the domain of Pure Function: the separator of typical and divergent thought.</p>
         <div class="profile-card__accent"></div>
       </div>
     </section>
@@ -119,6 +102,17 @@
   <footer class="footer" id="main-footer">
     <div class="footer__text">Based in New York &middot; &copy; 2026 <span class="footer__brand">Marcel Shorter</span>. All rights reserved.</div>
   </footer>
+
+  <!-- READER'S NOTE MODAL -->
+  <div class="rn-modal" id="readers-note-modal" onclick="if(event.target===this)this.classList.remove('active')">
+    <div class="rn-modal__box">
+      <button class="rn-modal__close" onclick="this.closest('.rn-modal').classList.remove('active')">&times;</button>
+      <h3 class="rn-modal__title">Reader&rsquo;s Note</h3>
+      <p class="rn-modal__author">MARCEL SHORTER</p>
+      <p class="rn-modal__text">This writing has not been developed linearly, nor is it to be understood linearly. To those afflicted by neurodivergence this style will feel familiar. For others blessed by normalcy, such a disposition may make this style jarring &mdash; Persist, these formulations are intended to find footholds in places contemporary analysis has yet to encounter.</p>
+      <p class="rn-modal__text">I would implore you to not expect your conceptual entries and exits, of which there will be many, to be identical to another. There will be no boundaries deliberately upheld (aside from those necessary to maintain the mortal/financial/social sovereignty of the writer), we write to understand functions and functions alone.</p>
+    </div>
+  </div>
 
   <script>
     function copyLink() {
